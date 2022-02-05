@@ -2,7 +2,7 @@
   "name": "holgerjvogel,de",
   "version": "1.0.0",
   "description": "Personal Website",
-  "repository": "https://github.com/hjvogel/personal-page",
+  "repository": "https://github.com/hjvogel/personal-page.git",
   "author": "holger",
   "private": true,
   "scripts": {
