@@ -8,8 +8,8 @@ function hyphenate(str) {
 }
 /** @type {import('vitepress').UserConfig} */
 module.exports = {
-  title: 'Chris Shank',
-  description: "Chris Shank's notes.",
+  title: 'Holger',
+  description: "Holger's notes.",
   lang: 'en-US',
   head: [
     [
@@ -22,7 +22,7 @@ module.exports = {
         crossorigin: true,
       },
     ],
-    ['meta', { name: 'author', content: 'Chris Shank' }],
+    ['meta', { name: 'author', content: 'Holger' }],
     [
       'link',
       {
@@ -40,9 +40,9 @@ module.exports = {
         color: '#000000',
       },
     ],
-    ['meta', { property: 'og:site_name', content: "Chris Shank's Notes" }],
+    ['meta', { property: 'og:site_name', content: "Holger's Notes" }],
     ['meta', { property: 'orbit:color', content: 'green' }],
-    ['link', { rel: 'canonical', href: 'https://chrisshank.com' }],
+    ['link', { rel: 'canonical', href: 'https://holgerjvogel.de' }],
     [
       'script',
       { type: 'module', src: 'https://js.withorbit.com/orbit-web-component.js', async: true },
