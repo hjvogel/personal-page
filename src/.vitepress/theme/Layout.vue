@@ -18,7 +18,7 @@
       </transition>
 
       <footer class="mt-12 pt-1 border-t-2 border-gray-400 text-right">
-        ©<span class="font-light">ChrisShank</span><span class="font-extrabold">2021</span>
+        ©<span class="font-light">HolgerVogel</span><span class="font-extrabold">2021</span>
       </footer>
     </div>
   </div>
