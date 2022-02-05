@@ -1,9 +1,9 @@
 {
-  "name": "chrisshank.com",
+  "name": "holgerjvogel,de",
   "version": "1.0.0",
   "description": "Personal Website",
-  "repository": "https://github.com/ChrisShank/chrisshank.com.git",
-  "author": "chrisshank <chris.shank.23@gmail.com>",
+  "repository": "https://github.com/hjvogel/personal-page",
+  "author": "holger",
   "private": true,
   "scripts": {
     "dev": "vitepress dev src",
