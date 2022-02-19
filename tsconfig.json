@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "esnext" ,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "outDir": "./dist" ,
+    "rootDir": "./" ,
+    "strict": true ,
+    "noImplicitAny": true ,
+    "strictNullChecks": true ,
+    "esModuleInterop": true,
+    "skipLibCheck": true ,
+    "forceConsistentCasingInFileNames": true 
+  }
+}

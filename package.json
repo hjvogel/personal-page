@@ -1,27 +1,22 @@
 {
-  "name": "holgerjvogel,de",
+  "name": "vitepress-blog",
   "version": "1.0.0",
-  "description": "Personal Website",
-  "repository": "https://github.com/hjvogel/personal-page.git",
-  "author": "holger",
-  "private": true,
-  "scripts": {
-    "dev": "vitepress dev src",
-    "build": "vitepress build src",
-    "generate": "node scripts/export-bear.mjs",
-    "backlink": "note-link-janitor src/notes"
-  },
+  "main": "index.js",
+  "author": "Holger <hjvogel@gmx.de>",
+  "license": "MIT",
   "devDependencies": {
-    "@andymatuschak/note-link-janitor": "^0.0.1",
-    "@tailwindcss/typography": "^0.3.0",
-    "autoprefixer": "^10.0.0",
-    "markdown-it": "^10.0.0",
-    "markdown-it-attrs": "^3.0.3",
-    "markdown-it-footnote": "^3.0.2",
-    "markdown-it-wikilinks": "^1.0.1",
-    "postcss": "^8.2.4",
-    "sqlite3": "^5.0.1",
-    "tailwindcss": "^2.0.0",
-    "vitepress": "^0.12.0"
+    "fs-extra": "^10.0.0",
+    "globby": "11.0.4",
+    "gray-matter": "^4.0.3",
+    "lottie-web": "^5.7.14",
+    "vitepress": "^0.21.4"
+  },
+  "scripts": {
+    "dev": "vitepress dev ",
+    "build": "vitepress build ",
+    "serve": "vitepress serve "
+  },
+  "dependencies": {
+    "dayjs": "^1.10.7"
   }
 }
