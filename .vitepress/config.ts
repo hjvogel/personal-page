@@ -3,7 +3,7 @@ import { getPosts, getPostLength } from "./theme/serverUtils";
 async function config() {
   return {
     lang: "en-US",
-    title: "John D",
+    title: "John",
     href: "/about/Me",
     description: "I am John Doe",
     head: [
@@ -77,7 +77,7 @@ href: "/about/Me",
       //   "./posts/": false,
       //   "/": false,
       // },
-      sidebar: false,
+      //sidebar: false,
     },
   };
 }

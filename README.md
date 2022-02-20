@@ -10,7 +10,7 @@ npm run-script build
 
 npm run-script dev
 
-check https://localhost:3000
+check local [click here](  - localhost:3000)
 
 ## Highlights
 

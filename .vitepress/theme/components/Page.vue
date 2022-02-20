@@ -1,5 +1,5 @@
 <template>
-  <ShareCard />
+  
   <h1 class="blog-title">Blog</h1>
   <div class="blogList">
     <a class="blog" v-for="item in posts" :href="withBase(item.regularPath)">
@@ -18,6 +18,9 @@
       {{ i }}
     </div>
   </div>
+  
+  <ShareCard />
+  
 </template>
 <script lang="ts" setup>
 interface post {

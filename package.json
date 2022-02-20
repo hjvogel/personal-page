@@ -2,7 +2,7 @@
   "name": "vitepress-blog",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Holger <hjvogel@gmx.de>",
+  "author": "Holger",
   "license": "MIT",
   "devDependencies": {
     "fs-extra": "^10.0.0",
@@ -11,10 +11,11 @@
     "lottie-web": "^5.7.14",
     "vitepress": "^0.21.4"
   },
+  "private": true,
   "scripts": {
-    "dev": "vitepress dev ",
-    "build": "vitepress build ",
-    "serve": "vitepress serve "
+    "dev": "vitepress dev",        
+    "build": "vitepress build",
+    "serve": "vitepress serve"
   },
   "dependencies": {
     "dayjs": "^1.10.7"
