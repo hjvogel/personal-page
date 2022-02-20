@@ -46,12 +46,10 @@ async function config() {
       posts: await getPosts(),
       pageSize: 3,
       postLength: await getPostLength(),
-
       //       algolia: {  search tool
       //         apiKey: "xxx",
       //         indexName: "my-docs",
       //       },
-
       nav: [  // TODO menu or toggle & hide options of side shown (no link needed to where we are)
         {
           text: "Home",
