@@ -13,7 +13,6 @@ async function config() {
           rel: "icon",
           // type: 'image/png',
           type: "image/jpeg",
-          //link: "/about/Me",
         },
       ],
       [
@@ -21,7 +20,6 @@ async function config() {
         {
           name: "author",
           content: "John Doe",
-href: "/about/Me",
         },
       ],
       [
