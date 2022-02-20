@@ -30,14 +30,10 @@ jobs:
       - name: Build Packages
         run: npm run build 
         
-      - name: reset git
-        run: git reset --hard
-
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
-          server: ftp.samkirkland.com
-          username: myFtpUserName
-          password: ${{ secrets.password }}
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
 
 
