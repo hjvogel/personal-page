@@ -4,7 +4,7 @@
 name: Node.js Package
 
 on:
-  push:  # fixrelease:
+  release:  ## push?
     types: [created]
 
 jobs:
@@ -16,7 +16,11 @@ jobs:
         with:
           node-version: 16
       - run: npm install
+      - run: npm build
       - run: npm test
+      env:
+          CI: true
+      echo 'build npm'
 
   publish-npm:
     needs: build
@@ -31,3 +35,5 @@ jobs:
       - run: npm publish
        # env:
         #  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        echo 'pub npm'
+
