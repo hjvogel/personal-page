@@ -34,7 +34,7 @@ jobs:
 
 
       - name: Publish release
-        run: git push origin gh-pages
+        run: git push origin "gh-pages"
 
   prevent_failed_status:
     name: Prevent failed status when skipped
