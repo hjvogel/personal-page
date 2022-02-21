@@ -32,18 +32,46 @@ jobs:
       - name: Build
         run: npm run build --if-present
 
+      - name: Release
+        run: |
+          readonly COMMIT_MESSAGE="${{ github.event.commits[0].message }}"
+          if [[ "${COMMIT_MESSAGE: -11: -1}" == 'ci release' ]]; then
+            echo "::set-env name=NEXT_VERSION::$(npm run release:version --silent)"
+            npx --no-install standard-version
+          else
+            readonly RELEASE_TYPE="${COMMIT_MESSAGE: -6: -1}"
+            echo "::set-env name=NEXT_VERSION::$(
+                npm run release:version --silent -- --releaseAs "${RELEASE_TYPE}"
+                )"
+            npx --no-install standard-version --release-as "${RELEASE_TYPE}"
+          fi
+      - name: Publish release
+        run: git push --follow-tags
+      - name: Publish GitHub release
+        uses: actions/create-release@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ env.NEXT_VERSION }}
+          release_name: v${{ env.NEXT_VERSION }}
+          body: |
+            See the the [changelog](
+              https://github.com/${{ github.repository }}/blob/master/CHANGELOG.md
+            ) for the changes included in this release.
 
-      - name: Deploy
-        uses: ./
-          with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          #publish_dir: ./public    
-          publish_branch: "gh-pages"  # default: gh-pages
+  prevent_failed_status:
+    name: Prevent failed status when skipped
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prevent failed status when skipped
+        run: |
+          echo "Run this job to prevent the workflow status from showing as" \
+               "failed when all other jobs are skipped."
 
 
-      #- name: Publish
-         # registry-url: https://registry.npmjs.org/
-        #run: npm publish
-       # env:
-        #  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
- 
+      #- name: Deploy
+     #   uses: ./
+      #    with:
+       #     publish_branch: "gh-pages"  # default: gh-pages github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
