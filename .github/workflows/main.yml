@@ -36,13 +36,9 @@ jobs:
         run: |
           readonly COMMIT_MESSAGE="${{ github.event.commits[0].message }}"
           if [[ "${COMMIT_MESSAGE: -11: -1}" == 'ci release' ]]; then
-            echo "::set-env name=NEXT_VERSION::$(npm run release:version --silent)"
             npx --no-install standard-version
           else
             readonly RELEASE_TYPE="${COMMIT_MESSAGE: -6: -1}"
-            echo "::set-env name=NEXT_VERSION::$(
-                npm run release:version --silent -- --releaseAs "${RELEASE_TYPE}"
-                )"
             npx --no-install standard-version --release-as "${RELEASE_TYPE}"
           fi
       - name: Publish release
