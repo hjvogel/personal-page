@@ -32,15 +32,7 @@ jobs:
       - name: Build
         run: npm run build --if-present
 
-      - name: Release
-        run: |
-          readonly COMMIT_MESSAGE="${{ github.event.commits[0].message }}"
-          if [[ "${COMMIT_MESSAGE: -11: -1}" == 'ci release' ]]; then
-            npx --no-install standard-version
-          else
-            readonly RELEASE_TYPE="${COMMIT_MESSAGE: -6: -1}"
-            npx --no-install standard-version --release-as "${RELEASE_TYPE}"
-          fi
+
       - name: Publish release
         run: git push --follow-tags
       - name: Publish GitHub release
@@ -48,8 +40,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v${{ env.NEXT_VERSION }}
-          release_name: v${{ env.NEXT_VERSION }}
+          tag_name: "1"
+          release_name: "01"
           body: |
             See the the [changelog](
               https://github.com/${{ github.repository }}/blob/master/CHANGELOG.md
@@ -62,7 +54,7 @@ jobs:
       - name: Prevent failed status when skipped
         run: |
           echo "Run this job to prevent the workflow status from showing as" \
-               "failed when all other jobs are skipped."
+               "failed when all other jobs are skipped ok."
 
 
       #- name: Deploy
