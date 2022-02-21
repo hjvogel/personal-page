@@ -45,13 +45,16 @@ jobs:
           name: code-coverage-report
           path: output/test/code-coverage.html
 
+      - name: Publish release
+        run: git push origin HEAD:gh-pages --force
+
       - name: Make commit message
         run: |
           git config --global user.name "GitHub Actions"
           git commit -m "Deployed build artifacts (`date '+%F %T %Z'`)" || true
           git restore .
 
-      - name: Publish release
+      - name: Publish release2
         run: git push origin HEAD:gh-pages --force
 
 
