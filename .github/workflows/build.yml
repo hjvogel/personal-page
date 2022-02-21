@@ -5,11 +5,12 @@ on:
     branches:
       - gh-pages
       - master
+      - main
   pull_request:
     branches:
       - gh-pages
       - master
-
+      - main
 jobs:
   build:
     runs-on: ${{ matrix.os }}
