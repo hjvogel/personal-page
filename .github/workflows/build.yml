@@ -3,12 +3,11 @@ name: Build
 on:
   push:
     branches:
-      - gh-pages
+      - "gh-pages"
       - master
       - main
   pull_request:
     branches:
-      - gh-pages
       - master
       - main
 jobs:

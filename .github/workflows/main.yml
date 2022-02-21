@@ -17,6 +17,13 @@ jobs:
       - run: npm test
       echo 'build npm'
 
+    deploy:
+      provider: pages
+      local_dir: dist
+      ob:
+        branch: "gh-pages"
+
+
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
