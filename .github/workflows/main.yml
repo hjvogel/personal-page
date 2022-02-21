@@ -1,44 +1,39 @@
-name: Node.js Package
+name: Build
 
 on:
-  release:  ## push?
-    types: [created]
+  push:
+    branches:
+      - "gh-pages"
+      - master
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        os: [ubuntu-latest]
+        node-version: [16.x]
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Build on Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci --ignore-scripts
-      - run: npm run build --if-present
-        name: Build
-      - run: npm test
+          cache: 'npm'
 
+      - name: Install dependencies
+        run: npm install
 
-    deploy:
-      provider: pages
-      local_dir: dist
-      on:
-        branch: "gh-pages"
+      - name: Build
+        run: npm run build --if-present
 
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 16
+      - name: Publish
           registry-url: https://registry.npmjs.org/
-      - run: npm install
       - run: npm publish
        # env:
         #  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
