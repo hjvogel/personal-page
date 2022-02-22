@@ -9,24 +9,33 @@ on:
 
 jobs:
   publish-gh-pages:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: ${{ matrix.node-version }}
+
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
       #name: Install dependencies
       - run: npm install
       - run: npm run-script build
       - run: npm test
 
-            - name: Archive production artifacts
+      - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
           name: dist-without-markdown
           path: |
             dist
-            !dist/**/*.mad
+            !dist/**/*.yml
+
       - name: Archive code coverage results
         uses: actions/upload-artifact@v2
         with:
@@ -44,7 +53,6 @@ jobs:
 
       - name: Publish release2
         run: git push origin HEAD:gh-pages --force
-
 
       - run: git config user.name "hjvogel_test" && git config user.email "hjvogel@gmx.de"
       # name deploy  # add package.json: gh-pages -d public -r https://$GH_TOKEN@github.com/hjvogel/personal-page.git"
