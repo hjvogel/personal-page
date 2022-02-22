@@ -17,7 +17,6 @@ jobs:
           node-version: 12
       #name: Install dependencies
       - run: npm install
-     
       - run: npm build
       - run: npm test
       - run: git config user.name "hjvogel_test" && git config user.email "hjvogel@gmx.de"
