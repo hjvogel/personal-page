@@ -16,12 +16,12 @@ jobs:
         with:
           node-version: 12
       - name: Install dependencies
-        run: npm install
+      - run: npm install
      
       - run: npm ci
       - name: config git
-        run: git config user.name "hjvogel_test" #&& git config user.email "mymail@gmail.com"
+      - run: git config user.name "hjvogel_test" #&& git config user.email "mymail@gmail.com"
       - name deploy  # add package.json: gh-pages -d public -r https://$GH_TOKEN@github.com/hjvogel/personal-page.git"
-         run: npm run deploy
+      - run: npm run deploy
         env:
           GH_TOKEN: ${{secrets.SECRET_GITHUB_TOKEN}}
