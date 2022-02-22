@@ -19,7 +19,7 @@ jobs:
       - run: npm install
      
       - run: npm ci
-      - run: git config user.name "hjvogel_test" git config user.email "hjvogel@gmx,de"
+      - run: git config user.name "hjvogel_test" && git config user.email "hjvogel@gmx.de"
       # name deploy  # add package.json: gh-pages -d public -r https://$GH_TOKEN@github.com/hjvogel/personal-page.git"
       - run: npm run deploy
         env:
