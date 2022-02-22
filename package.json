@@ -13,8 +13,9 @@
   },
   "private": true,
   "scripts": {
-    "dev": "vitepress dev",        
-    "build": "vitepress build && gh-pages -d public -r https://$GH_TOKEN@github.com/hjvogel/personal-page.git", 
+    "dev": "vitepress dev", 
+    "build": "vitepress build",       
+    "deploy": "vitepress build && gh-pages -d public -r https://$GH_TOKEN@github.com/hjvogel/personal-page.git", 
     "serve": "vitepress serve"
   },
   "dependencies": {
