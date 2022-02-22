@@ -17,10 +17,10 @@ jobs:
           node-version: 12
       #name: Install dependencies
       - run: npm install
-      - run: npm build
+      - run: npm run-script build
       - run: npm test
       - run: git config user.name "hjvogel_test" && git config user.email "hjvogel@gmx.de"
       # name deploy  # add package.json: gh-pages -d public -r https://$GH_TOKEN@github.com/hjvogel/personal-page.git"
-      - run: npm run deploy
+      - run: npm run-script deploy
         env:
           GH_TOKEN: ${{secrets.SECRET_GITHUB_TOKEN}}
