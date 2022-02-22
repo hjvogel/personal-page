@@ -9,18 +9,13 @@ on:
 
 jobs:
   publish-gh-pages:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node-version: 16 # ${{ matrix.node-version }}
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v1
         with:
-          node-version: 16 # ${{ matrix.node-version }}
+          node-version: 14
           cache: 'npm'
 
       #name: Install dependencies
