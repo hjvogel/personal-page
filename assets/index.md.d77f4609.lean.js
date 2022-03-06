@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.4b3bdaac.js";const l='{"title":"home","description":"","frontmatter":{"home":true,"date":"2022-02-14T00:00:00.000Z","title":"home","sidebar":false},"headers":[],"relativePath":"index.md","lastUpdated":1646583101304}',r={};function o(s,n,c,d,i,p){return a(),t("div")}var m=e(r,[["render",o]]);export{l as __pageData,m as default};
