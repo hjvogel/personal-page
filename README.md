@@ -48,7 +48,7 @@ yarn dev
 
 [comments-merging-like] (https://github.com/debiki/talkyard)
 
-[react-vercel-vite?] (https://dev.to/ngduc/try-react-18-with-vite-typescript-and-vercel-okg)
+[react-vercel-vite?](https://dev.to/ngduc/try-react-18-with-vite-typescript-and-vercel-okg)
 
 [vitepress-for-component](https://github.com/dewfall123/vitepress-for-component)
 
