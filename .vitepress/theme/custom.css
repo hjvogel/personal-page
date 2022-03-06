@@ -5,8 +5,6 @@
   --c-bg: black;
   --c-text: white;
   --c-hover: #ffffff;
-
- 
 }
 .dark {
  --c-hover: #212121;
@@ -17,12 +15,6 @@
   min-height: 100vh;
   position: relative;
 }
-/* a {
-} */
-/* a:hover {
-  text-decoration: none;
-  color: var(--c-brand-light);
-} */
 .theme {
   background-color: var(--c-bg);
 }

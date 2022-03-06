@@ -7,7 +7,7 @@ import "./custom.css";
 export default {
   ...DefaultTheme,
   Layout: MyLayout,
-  enhanceApp({ app, router, siteData }) {  //router
+  enhanceApp({ app, router, siteData }) {
     app.component("Archives", Archives);
     app.component("Tags", Tags);
   },
