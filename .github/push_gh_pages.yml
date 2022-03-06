@@ -1,0 +1,39 @@
+on: push 
+name: CI/CD
+jobs:
+  FTP-Deploy-Action:
+    name: CI&CD 
+    runs-on: ubuntu-latest 
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v2.1.4 
+        with:
+          node-version: '12.x' 
+      - name: Cache node modules
+        id: cache 
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules 
+        with:
+          path: node_modules 
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package.json') }} 
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true' 
+        run: npm install 
+      - name: Build Packages
+        run: npm run build
+      - name: Create .nojekyll
+        run: touch ${{ inputs.folder }}/.nojekyll
+        shell: bash
+        
+      - name: Deploy
+        run: npm insatll JamesIves/github-pages-deploy-action
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+          with:
+           # branch: 'gh-pages' # The branch the action should deploy to.
+            folder: ./ # The folder the action should deploy.
+           # dist: .vitepress/dist
+

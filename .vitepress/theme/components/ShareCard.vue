@@ -1,7 +1,7 @@
 <template>
   <div class="shareCard">
     <h1>
-      <img class="share-avator" src="/tea.svg" />
+      <img class="share-avator" src="/cafe.svg" />
       <span> John Doe Here</span>
     </h1>
     <p> ---  </p>
@@ -70,4 +70,3 @@ const go = (item: card) => {
   transform: translate(-2px, -2px);
 }
 </style>
-

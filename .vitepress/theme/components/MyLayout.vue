@@ -5,12 +5,12 @@
       <Category v-if="isPost" />
     </template>
     <template #navbar-search> <ToggleTheme /></template>
-    <template #page-bottom>
-    </template>
-    <template #home-features> <Page /></template>
+   
+    <template #home-features> <Page /> </template>
+    <template #page-bottom>   </template>
   </Layout>
 
-  <Footer />
+  <!--Footer /-->
 </template>
 <script lang="ts" setup>
 import DefaultTheme from "vitepress/theme";

@@ -3,7 +3,7 @@ import { getPosts, getPostLength } from "./theme/serverUtils";
 async function config() {
   return {
     lang: "en-US",
-    title: "John D",
+    title: "John",
     href: "/about/Me",
     description: "I am John Doe",
     head: [
@@ -13,7 +13,6 @@ async function config() {
           rel: "icon",
           // type: 'image/png',
           type: "image/jpeg",
-          //link: "/about/Me",
         },
       ],
       [
@@ -21,7 +20,6 @@ async function config() {
         {
           name: "author",
           content: "John Doe",
-href: "/about/Me",
         },
       ],
       [
@@ -41,19 +39,17 @@ href: "/about/Me",
     ],
     themeConfig: {
       //repo: "my/GithubSite", moved into about
-      logo: "/tea.svg",
+      logo: "/cafe.svg",
       docsDir: "/",
       // docsBranch: "master",
       lastUpdated: false,
       posts: await getPosts(),
       pageSize: 3,
       postLength: await getPostLength(),
-
       //       algolia: {  search tool
       //         apiKey: "xxx",
       //         indexName: "my-docs",
       //       },
-
       nav: [  // TODO menu or toggle & hide options of side shown (no link needed to where we are)
         {
           text: "Home",
@@ -77,7 +73,7 @@ href: "/about/Me",
       //   "./posts/": false,
       //   "/": false,
       // },
-      sidebar: false,
+      //sidebar: false,
     },
   };
 }

@@ -1,6 +1,6 @@
 <template>
   <footer>
-    Me
+    copyrights reserved
   </footer>
 </template>
 <script lang="ts" setup>

@@ -1,6 +1,6 @@
 ## Blog Demo
 
-This is a demo / template [click here](https://holgerjvogel.de) see what it could work. 
+This is a demo / template [click here](https://holgerjvogel.de) see what it is and how it could work. 
 
 For now, It use vitepress & Vue & TypeScript to build.
 
@@ -10,7 +10,7 @@ npm run-script build
 
 npm run-script dev
 
-check https://localhost:3000
+check local [click here](  - localhost:3000)
 
 ## Highlights
 
@@ -19,7 +19,7 @@ check https://localhost:3000
 - [x] archives
 - [x] tags
 - [x] content level
-- [x] comments
+- [x] comments (not yet)
 - [x] lastUpdated
 - [x] github actions
 - [x] mobile + desktop 
@@ -32,7 +32,23 @@ yarn
 yarn dev
 ```
 
-## Thanks
+## Thanks And Ideas
+
+[see-gh-pages] (https://blog.logrocket.com/automatically-build-deploy-vuejs-app-github-pages)
+
+[checking] (https://github.com/julon/vue-cli-template-github-pages)
+
+[nuxt-content-checking?] (https://gilberttanner.com/blog/creating-a-blog-with-nuxt-content)
+
+[nuxt-jam-content?] (https://levelup.gitconnected.com/how-to-create-a-blog-with-vue-and-nuxt-content-f8f0d58cf8bb)
+
+[?-hot:Comments-handled-by-Disqus] (https://help.disqus.com/en/articles/1717050-how-does-disqus-work)
+
+[commenting-isso] (https://github.com/posativ/isso)
+
+[comments-merging-like] (https://github.com/debiki/talkyard)
+
+[react-vercel-vite?] (https://dev.to/ngduc/try-react-18-with-vite-typescript-and-vercel-okg)
 
 [vitepress-for-component](https://github.com/dewfall123/vitepress-for-component)
 

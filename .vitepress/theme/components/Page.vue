@@ -1,10 +1,11 @@
 <template>
-  <ShareCard />
+  
   <h1 class="blog-title">Blog</h1>
   <div class="blogList">
     <a class="blog" v-for="item in posts" :href="withBase(item.regularPath)">
       <div class="title">{{ item.frontMatter.title }}</div>
       <div class="date">{{ transDate(item.frontMatter.date) }}</div>
+      <div class="tags">{{ item.frontMatter.description + " {" + item.frontMatter.tags+ "}"}}</div>
     </a>
   </div>
   <div class="pagination">
@@ -18,6 +19,9 @@
       {{ i }}
     </div>
   </div>
+  
+  <ShareCard />
+  
 </template>
 <script lang="ts" setup>
 interface post {
@@ -143,19 +147,19 @@ const transDate = (date: string) => {
 .blog {
   width: 85%;
   display: block;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 0 20px;
   margin: 10px;
   background: var(--c-bg);
-  max-width: 600px;
-  box-shadow: 6px 6px var(--c-brand);
-  border: 4px solid #282936;
+  max-width: 700px;
+  box-shadow: 3px 3px var(--c-brand);
+  border: 2px solid #2826;
   cursor: pointer;
 }
 .blog:hover {
   text-decoration: none;
   transform: translate(-2px, -2px);
-  box-shadow: 10px 10px var(--c-brand);
+  box-shadow: 5px 10px var(--c-brand);
 }
 .title {
   color: var(--c-brand-light);
@@ -165,12 +169,15 @@ const transDate = (date: string) => {
 .date {
   padding-bottom: 7px;
 }
+.tags {
+	  padding-bottom: 6px;
+	}
 .pagination {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 70px;
+  bottom: 150px;
   width: 100%;
 }
 .link {
@@ -178,7 +185,7 @@ const transDate = (date: string) => {
   height: 2rem;
   line-height: 2rem;
   text-align: center;
-  border: 1px solid #282936;
+  border: 1px solid #28295;
   cursor: pointer;
   border-right: none;
   transition: 0.2s;
