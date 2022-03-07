@@ -177,7 +177,7 @@ const transDate = (date: string) => {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 220px;
+  bottom: 232px;
   width: 100%;
 }
 .link {

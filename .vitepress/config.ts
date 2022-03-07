@@ -3,15 +3,14 @@ import { getPosts, getPostLength } from "./theme/serverUtils";
 async function config() {
   return {
     lang: "en-US",
-    title: "John",
+    title: "H John Vogel",
     href: "/about/Me",
-    description: "I am John Doe",
+    description: "John Vogel",
     head: [
       [
         "link",
         {
           rel: "icon",
-          // type: 'image/png',
           type: "image/jpeg",
         },
       ],
@@ -19,7 +18,7 @@ async function config() {
         "meta",
         {
           name: "author",
-          content: "John Doe",
+          content: "John Vogel",
         },
       ],
       [
@@ -33,24 +32,19 @@ async function config() {
         "meta",
         {
           property: "og:description",
-          content: "Home of John Doe",
+          content: "Home of John Vogel",
         },
       ],
     ],
     themeConfig: {
-      //repo: "my/GithubSite", moved into about
       logo: "/cafe.svg",
       docsDir: "/",
-      // docsBranch: "master",
       lastUpdated: false,
       posts: await getPosts(),
       pageSize: 3,
       postLength: await getPostLength(),
-      //       algolia: {  search tool
-      //         apiKey: "xxx",
-      //         indexName: "my-docs",
-      //       },
-      nav: [  // TODO menu or toggle & hide options of side shown (no link needed to where we are)
+
+      nav: [ 
         {
           text: "Home",
           link: "/",
@@ -65,15 +59,9 @@ async function config() {
         },
 	      {  // move up
           text: "About",
-	link: "/about/Me",
+        	link: "/about/Me",
 	      },        
       ],
-
-      // sidebar: {
-      //   "./posts/": false,
-      //   "/": false,
-      // },
-      //sidebar: false,
     },
   };
 }

@@ -1,8 +1,8 @@
 <template>
-  <div class="shareCard">
+  <div class="shareCard" @click="go2()">
     <h1>
       <img class="share-avator" src="/cafe.svg" />
-      <span> John Doe Here</span>
+      <span> Holger John Vogel </span>
     </h1>
     <p> ---  </p>
     <div class="cardPart">
@@ -25,10 +25,10 @@
 </template>
 
 <script lang="ts" setup>
-type card = {
-  text: string;
-  icon: string;
-  url: string;
+	type card = {
+	  text: string;
+	  icon: string;
+	  url: string;
 };
 const list: card[] = [
   {
@@ -50,15 +50,21 @@ const list: card[] = [
 const go = (item: card) => {
   window.location.href = item.url;
 };
+
+const go2 = () => {
+	window.location.href = '/about/Me';
+	router.push('/about/Me');
+};
 </script>
 <style scoped>
 .shareCard {
   display: flex;
   flex-direction: column;
   align-items: center;
+cursor: pointer;
 }
 .share-avator {
-  width: 50px;
+  width: 42px;
 }
 .cardPart {
   display: flex;
