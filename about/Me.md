@@ -7,7 +7,7 @@ __________
 This is a collection of ideas, notes, and writings that I have been learning and thinking through.
 
 
-Im interested in analysing static structures first before going into dynamical rather modelling & understaning of our complex nature. This leads me to the never ending study🌺.
+I'm interested in analysing static structures first before going into dynamical rather modelling & understaning of our complex nature. This leads me to the never ending study  🌺.
 
 
 
@@ -19,4 +19,17 @@ Im interested in analysing static structures first before going into dynamical r
 <span class="mr-4"></span>
 [   My Github](https://github.com/HJVogel)
 
-#### No legal or financial advice.
+##### No legal or financial advice
+________________
+
+#### Blog posts
+ <!-- BLOG-POST-LIST:START -->
+[My Blog](https://www.holgerjvogel.de/posts/First.html)
+ <!-- BLOG-POST-LIST:END -->
+
+
+#### Friends
+
+Lets connect to friends and builders here
+
+....
