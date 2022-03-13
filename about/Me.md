@@ -12,7 +12,7 @@ I'm interested in analysing static structures first before going into dynamical 
 
 
 ### Looking to connect ?
-
+[![Twitter](https://badgen.net/badge/icon/linkedin?icon=linkedin&label)](https://twitter.com)
 [LinkedIn   ](https://ch.linkedin.com/in/holger-vogel-dr-rer-nat-769aa295)
 <span class="mr-4"></span>
 [  -- My Thesis --  ](https://freidok.uni-freiburg.de/dnb/download/364)
