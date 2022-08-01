@@ -13,7 +13,7 @@ tags:
 
 just give it a try
 
-Building own web page and content is still a challenge and ppl rather go to popular providers who fully take over and host anything 'for free' - but make money with what you re giving for free.
+Building your own web page and content is still a challenge and ppl rather go to popular providers who fully take over and host anything 'for free' - but make money with what you re giving for free.
 
 #### Here is now a way to change, try to own your data and identity.
 

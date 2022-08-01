@@ -2,12 +2,12 @@
 
 __________
 
-## Welcome to Holger J Vogel and my Website!
+## Welcome to H. John Vogel and my own Website!
 
 This is a collection of ideas, notes, and writings that I have been learning and thinking through.
 
 
-I'm interested in analysing static structures first before going into dynamical rather modelling & understaning of our complex nature. This leads me to the never ending study  🌺.
+I'm interested in analysing static structures first before going into dynamic modelling & understanding of our (too) complex nature. This leads me to the never ending study  🌺.
 
 
 
