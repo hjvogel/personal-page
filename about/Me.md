@@ -13,7 +13,7 @@ I'm interested in analysing static structures first before going into dynamic mo
 
 ### Looking to connect ?
 
-[LinkedIn   ](https://ch.linkedin.com/in/holger-vogel-dr-rer-nat-769aa295)
+[LinkedIn   ](https://ch.linkedin.com/in/dr-holger-vogel-769aa295)
 <span class="mr-4"></span>
 [  -- My Thesis --  ](https://freidok.uni-freiburg.de/dnb/download/364)
 <span class="mr-4"></span>
