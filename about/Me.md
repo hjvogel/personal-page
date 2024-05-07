@@ -22,15 +22,12 @@ I'm interested in analysing static structures first before going into dynamic mo
 ##### No legal or financial advice
 ________________
 
-#### Blog posts
+#### More Creations
  <!-- BLOG-POST-LIST:START -->
-[My Blog](https://www.holgerjvogel.de/posts/First.html)
+[My MicroVerse / Basement ](https://www.holgerjvogel.de/)
 
 
-[Feb2022](https://www.holgerjvogel.de/posts/Feb2022.html)
-
-
-[All Posts](https://www.holgerjvogel.de)
+[PoC ProfiThon.site](https://profi-thon-site.vercel.app/)
  <!-- BLOG-POST-LIST:END -->
 
 

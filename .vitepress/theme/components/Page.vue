@@ -1,6 +1,6 @@
 <template>
-  
-  <h1 class="blog-title">Blog</h1>
+  <h1 class="shareCard" @click="navigateToBase">visit my basement...</h1>
+  <h2 class="blog-title">Blog</h2>
   <div class="blogList">
     <a class="blog" v-for="item in posts" :href="withBase(item.regularPath)">
       <div class="title">{{ item.frontMatter.title }}</div>
@@ -31,6 +31,9 @@ interface post {
 import { onMounted, ref, reactive } from "vue";
 import ShareCard from "./ShareCard.vue";
 import { useData, withBase } from "vitepress";
+//import { useRouter } from 'vue-router'; // For navigation
+
+//const router = useRouter(); // Initialize router instance
 const { theme } = useData();
 
 // get posts
@@ -129,9 +132,21 @@ const transDate = (date: string) => {
   }
   return `${month} ${day}, ${year}`;
 };
+
+
+function navigateToBase() {
+  window.location.href = 'https://holgerjvogel.de';
+  router.push('https://holgerjvogel.de'); // Navigate to the tetris page
+}
 </script>
 
 <style scoped>
+.shareCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+cursor: pointer;
+}
 .blog-title {
   text-align: center;
   font-weight: bold;
