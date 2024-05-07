@@ -52,8 +52,8 @@ const go = (item: card) => {
 };
 
 const go2 = () => {
-	window.location.href = '/about/Me';
-	router.push('/about/Me');
+	window.location.href = '/about/Me.html';
+	router.push('/about/Me.html');
 };
 </script>
 <style scoped>
